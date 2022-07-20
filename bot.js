@@ -123,7 +123,7 @@ client.on('interactionCreate', async interaction => {
 			return;
 		}
 	} else if (commandName == 'exportwallet') {
-		if (interaction.channelId != '962709209122762792') {
+		if (interaction.channelId != '907205846059089951') {
 			await interaction.reply({ content: 'This command is not allowed in this channel', ephemeral: true });
 			return;
 		}
