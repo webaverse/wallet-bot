@@ -27,6 +27,11 @@ const event_channel = [
 	'968785879105683526',
 	'972401545901645895'
 ]
+const assignable_roles = [
+	gladiator,
+	allowlist,
+	collab_al
+]
 
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, 'GUILD_MEMBERS', Intents.FLAGS.GUILD_MESSAGES], });
@@ -305,6 +310,11 @@ client.on('interactionCreate', async interaction => {
 			await interaction.reply({ content: 'You are not allowed to use this command', ephemeral: true });
 			return;
 		};
+
+		if (!assignable_roles.includes(interaction.options.get('role').role.id)) {
+			await interaction.reply({ content: 'You are not allowed to assign that role', ephemeral: true });
+			return;
+		}
 
 		// console.log(interaction.member.roles);
 		try {
