@@ -467,12 +467,18 @@ async function export_wallet(cl, guid_members) {
 	wallet_arr.push(['Existed in Discord', existed]);
 
 	const gsapi = google.sheets({ version: 'v4', auth: cl });
-	const exported = await gsapi.spreadsheets.values.update({
-		spreadsheetId: '1wezKrxYLNPIj0IG6-1uCVc-YiOWGEp3qY-zsKeJ0XEM',
-		range: 'Sheet1',
-		valueInputOption: 'USER_ENTERED',
-		resource: { values: wallet_arr },
-	});
+	try {
+		const exported = await gsapi.spreadsheets.values.update({
+			spreadsheetId: '1wezKrxYLNPIj0IG6-1uCVc-YiOWGEp3qY-zsKeJ0XEM',
+			range: 'Sheet1',
+			valueInputOption: 'USER_ENTERED',
+			resource: { values: wallet_arr },
+		});
+	}
+	catch(e){
+		console.log(e);
+	}
+	
 
 	if (exported.status == 200) return true;
 	else return false;
