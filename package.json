@@ -1,9 +1,9 @@
 { 
   "scripts": {
-    "start": "sudo $(which node) $(which forever) start -a -l forever.log -o stdout.log -e stderr.log index.js",
-    "stop": "sudo $(which node) $(which forever) stop index.js",
+    "start": "sudo $(which node) $(which forever) start -a -l forever.log -o stdout.log -e stderr.log bot.js",
+    "stop": "sudo $(which node) $(which forever) stop bot.js",
     "restart": "npm stop && npm start",
-    "dev": "node ./index.js"
+    "dev": "node ./bot.js"
   },
   "dependencies": {
     "@discordjs/builders": "^1.0.0",
