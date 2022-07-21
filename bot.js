@@ -469,7 +469,7 @@ async function export_wallet(cl, guid_members) {
 	const gsapi = google.sheets({ version: 'v4', auth: cl });
 	try {
 		const exported = await gsapi.spreadsheets.values.update({
-			spreadsheetId: '1wezKrxYLNPIj0IG6-1uCVc-YiOWGEp3qY-zsKeJ0XEM',
+			spreadsheetId: '1xSqGgmKguQXx29A136KKANBYrDXgHtO8ZNhnITNYXh0',
 			range: 'Sheet1',
 			valueInputOption: 'USER_ENTERED',
 			resource: { values: wallet_arr },
