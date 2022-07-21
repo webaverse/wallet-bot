@@ -303,7 +303,12 @@ client.on('interactionCreate', async interaction => {
 
 		const event_role = '968773347401949224';
 		await interaction.reply({ content: 'Pinged', ephemeral: true });
-		await interaction.channel.send({ content: `<@&${event_role}>` });
+		try{	
+			await interaction.channel.send({ content: `<@&${event_role}>` });
+		}
+		catch(e){
+		console.log(e);
+		}	
 
 	} else if (commandName == 'role') {
 		if (!interaction.member.roles.cache.some(r => r.id === '953301503404290138')) {
