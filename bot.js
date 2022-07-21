@@ -21,6 +21,8 @@ const fan_art = '969461443428753488';
 const game_master = '971665868239015979';
 const big_brain = '969460807630999562';
 const silver = '978679979388858378';
+const gold = '978680104492363816';
+const bronze = '978679460515696670'
 const event_channel = [
 	'968785712897994762',
 	'968785782502473749',
@@ -35,7 +37,9 @@ const assignable_roles = [
 	big_brain,
 	OG_role,
 	game_master,
-	silver
+	silver,
+	gold,
+	bronze
 ]
 
 
