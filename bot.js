@@ -20,6 +20,7 @@ const gladiator = '972137076336250900';
 const fan_art = '969461443428753488';
 const game_master = '971665868239015979';
 const big_brain = '969460807630999562';
+const silver = '978679979388858378';
 const event_channel = [
 	'968785712897994762',
 	'968785782502473749',
@@ -30,7 +31,11 @@ const event_channel = [
 const assignable_roles = [
 	gladiator,
 	allowlist,
-	collab_al
+	collab_al,
+	big_brain,
+	OG_role,
+	game_master,
+	silver
 ]
 
 
