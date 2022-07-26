@@ -39,7 +39,8 @@ const assignable_roles = [
 	game_master,
 	silver,
 	gold,
-	bronze
+	bronze,
+	submitted
 ]
 
 
