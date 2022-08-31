@@ -6,7 +6,7 @@ const { guildId, clientId, token } = require('./config.json');
 module.exports = async () => {
 	const commands = [
 		new SlashCommandBuilder().setName('wallet')
-								.setDescription('Submit wallet address for allowlist mint')
+								.setDescription('Submit wallet address')
 								.addStringOption(option => option.setName('wallet_address')
 																.setDescription('Wallet address which you are using it to mint')
 																.setRequired(true)
