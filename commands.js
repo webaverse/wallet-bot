@@ -8,7 +8,7 @@ module.exports = async () => {
 		new SlashCommandBuilder().setName('wallet')
 								.setDescription('Submit wallet address')
 								.addStringOption(option => option.setName('wallet_address')
-																.setDescription('Wallet address which you are using it to mint')
+																.setDescription('Wallet address you are submitting')
 																.setRequired(true)
 												),
 		new SlashCommandBuilder().setName('walletcheck').setDescription('Check wallet submission'),
