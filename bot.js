@@ -117,7 +117,7 @@ client.on('interactionCreate', async interaction => {
 				wallet: wallet_address,
 			})
 
-			await interaction.member.roles.add('982957886047125574');
+			//await interaction.member.roles.add('982957886047125574');
 
 			if (created) await interaction.reply({ content: `Wallet \`${wallet_address}\` successfully submitted`, ephemeral: true });
 			else await interaction.reply({ content: `Wallet failed to submit`, ephemeral: true });
